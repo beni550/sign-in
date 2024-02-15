@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="/home/style.css">
+</head>
+<body>
+    <h1 id="welcome-message"></h1>
+
+    <script>
+        // קריאת הפרמטר של השם המשתמש מה-URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const username = urlParams.get('username');
+
+        // עדכון התוכן של ההודעה בהתאם לשם המשתמש
+        const welcomeMessage = document.getElementById('welcome-message');
+        welcomeMessage.textContent = `Hello ${username}`;
+    </script>
+</body>
+</html>
